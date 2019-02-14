@@ -22,6 +22,7 @@ class Pokemon
     if pokemon_info.length == 4
       x.hp = db.execute("SELECT hp FROM pokemon WHERE id = ?", id)
     end
+    x
   end
 
   def alter_hp(new_hp, db)
