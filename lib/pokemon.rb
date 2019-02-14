@@ -19,7 +19,7 @@ class Pokemon
     pokemon_info = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
     # binding.pry
     x = Pokemon.new(id: pokemon_info[0], name: pokemon_info[1], type: pokemon_info[2], db: db)
-    if pokemon_info.legnth == 4
+    if pokemon_info.length == 4
       x.hp = db.execute("SELECT hp FROM pokemon WHERE id = ?", id)
     end
   end
